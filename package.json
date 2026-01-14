@@ -9,11 +9,18 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@monaco-editor/react": "^4.7.0",
+    "fabric": "^7.1.0",
+    "lucide-react": "^0.562.0",
     "next": "16.1.1",
+    "pdfjs-dist": "^5.4.530",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "react-resizable-panels": "^4.4.1",
+    "zustand": "^5.0.10"
   },
   "devDependencies": {
+    "@types/fabric": "^5.3.11",
     "eslint": "^9",
     "eslint-config-next": "16.1.1"
   }
