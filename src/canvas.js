@@ -67,17 +67,15 @@ export default function Canvas({ pdfUrl }) {
   useEffect(() => {
     if (fabricRef.current) {
       fabricRef.current.setDimensions({
-        width: pdfSize. width,
+        width: pdfSize.width,
         height: pdfSize.height,
       });
     }
   }, [pdfSize]);
 
-  // Render elements when they change or page changes
   useEffect(() => {
     if (fabricRef.current && fabricModuleRef.current && elements.length > 0 && isReady) {
-      console.log('Rendering elements:', elements. length);
-      renderElements(elements, currentPage, fabricRef.current, fabricModuleRef.current);
+      renderElements(elements, currentPage, fabricRef.current, fabricModuleRef.current, 1);
     }
   }, [elements, currentPage, isReady]);
 
@@ -106,7 +104,7 @@ export default function Canvas({ pdfUrl }) {
         const canvas = pdfCanvasRef.current;
         const context = canvas. getContext("2d");
 
-        const viewport = page.getViewport({ scale: 1.5 });
+        const viewport = page.getViewport({ scale: 1 });
         canvas.height = viewport.height;
         canvas. width = viewport.width;
 

@@ -24,7 +24,7 @@ export default function PdfBackground({ pdfUrl, page = 1, onPageRendered }) {
       const canvas = canvasRef.current;
       const context = canvas.getContext('2d');
       
-      const viewport = pdfPage.getViewport({ scale: 1.5 });
+      const viewport = pdfPage.getViewport({ scale: 1 });
       canvas.height = viewport.height;
       canvas.width = viewport.width;
 
@@ -46,8 +46,6 @@ export default function PdfBackground({ pdfUrl, page = 1, onPageRendered }) {
       ref={canvasRef} 
       style={{ 
         position: 'absolute', 
-        top: 0, 
-        left: 0,
         pointerEvents: 'none',
         opacity: 0.3
       }}
